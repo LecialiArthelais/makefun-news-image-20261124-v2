@@ -17,7 +17,8 @@ DST = os.path.join(OUT_DIR, "entry.png")
 
 
 def main():
-    shutil.copyfile(SRC, DST)
+    if os.path.abspath(SRC) != os.path.abspath(DST):
+        shutil.copyfile(SRC, DST)
     print("wrote " + DST)
 
 
