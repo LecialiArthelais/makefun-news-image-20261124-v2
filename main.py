@@ -8,9 +8,10 @@ All figures verified against sources on 24 Nov 2026; every story is
 dated by the day the event happened, not the day it was reported.
 """
 import math
+import os
 from PIL import Image, ImageDraw, ImageFont
 
-OUT = "entry.png"
+OUT = os.path.join(os.environ.get("MAKEFUN_OUTPUT_DIR", "."), "entry.png")
 SIZE = 1024
 MARGIN = 26
 WIDTH = SIZE - 2 * MARGIN
